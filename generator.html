@@ -55,20 +55,21 @@
   <button onclick="spin('problem', problems)">Spin</button>
 </div>
 
-<div class="wheel-box">
+<!--<div class="wheel-box">
   <h2>Wildcard</h2>
   <div id="wildcard" class="result">—</div>
   <button onclick="spin('wildcard', wildcards)">Spin</button>
 </div>
+  -->
 
 </main>
 
 <script>
-const genres = ["Sci-Fi", "Fantasy", "Horror", "Mystery", "Thriller", "Drama"];
-const settings = ["Abandoned city", "Deep space station", "Underground bunker", "Floating island", "Remote mountain village"];
-const characters = ["Retired detective", "Runaway AI", "Teen mechanic", "Time traveler", "Failed superhero"];
-const problems = ["Something is hunting them", "A secret is uncovered", "They are running out of time", "A betrayal occurs", "Reality starts breaking"];
-const wildcards = ["Told in reverse", "Only one character is real", "Dream vs reality blur", "Narrator is lying", "Takes place in one room"];
+const genres = ["Sci-Fi", "Fantasy", "Horror", "Mystery", "Thriller", "Drama", "Dystopian", "Adventure", "Historical Fiction", "Realistic Fiction"];
+const settings = ["Small Farming Town", "Diner along a highway", "Cheap apartment", "remote research facility", "Cargo ship", "School", "Hospital", "Empty house", "Bus station", "Hotel", "Remote weather station", "Festival", "Suburban neighborhood", "Train in motion", "Lodge in the mountains", "Shopping mall", "Courthouse", "Ancient city ruins", "Oceanside village", "Space Station", "Star Ship", "Alien planet", "Rocket planet"];
+const characters = ["Delivery Driver", "Substitute Teacher", "Photographer", "Cook", "Bus Driver", "Maintenence worker", "College student", "Retiree", "Librarian", "Mechanic", "Scientist", "Nurse", "Doctor", "Dog walker", "Security Guard", "Journalist", "Warehouse worker", "Software Developer", "Groundskeeper", "Taxi driver", "Tour Guide"];
+const problems = ["Something important is missing", "Plans fall through at the last minute", "Two people have differing memories of the same event", "A deadline is approaching", "Avoiding a conversation", "A message fails to get delivered", "Expections don't match reality", "Someone shows up unexpectedly", "Something breaks at an inconvenient time", "A misunderstanding spreads like wildfire", "Someone needs help but won't ask", "A decision has to be made quickly", "A promise becomes difficult to keep", "Someone is late", "Access to something is now restricted", "A rule becomes a problem", "Two goals conflict", "Someone feels out of place", "Trust is uncertain"];
+const wildcards = [""];
 
 function spin(id, list) {
   const choice = list[Math.floor(Math.random() * list.length)];
