@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Story Idea Generator</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .wheel-box {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .result {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Story Idea Generator</h1>
+  <p><a href="index.html">← Back to stories</a></p>
+</header>
+
+<main>
+
+<div class="wheel-box">
+  <h2>Genre</h2>
+  <div id="genre" class="result">—</div>
+  <button onclick="spin('genre', genres)">Spin</button>
+</div>
+
+<div class="wheel-box">
+  <h2>Setting</h2>
+  <div id="setting" class="result">—</div>
+  <button onclick="spin('setting', settings)">Spin</button>
+</div>
+
+<div class="wheel-box">
+  <h2>Character</h2>
+  <div id="character" class="result">—</div>
+  <button onclick="spin('character', characters)">Spin</button>
+</div>
+
+<div class="wheel-box">
+  <h2>Problem</h2>
+  <div id="problem" class="result">—</div>
+  <button onclick="spin('problem', problems)">Spin</button>
+</div>
+
+<div class="wheel-box">
+  <h2>Wildcard</h2>
+  <div id="wildcard" class="result">—</div>
+  <button onclick="spin('wildcard', wildcards)">Spin</button>
+</div>
+
+</main>
+
+<script>
+const genres = ["Sci-Fi", "Fantasy", "Horror", "Mystery", "Thriller", "Drama"];
+const settings = ["Abandoned city", "Deep space station", "Underground bunker", "Floating island", "Remote mountain village"];
+const characters = ["Retired detective", "Runaway AI", "Teen mechanic", "Time traveler", "Failed superhero"];
+const problems = ["Something is hunting them", "A secret is uncovered", "They are running out of time", "A betrayal occurs", "Reality starts breaking"];
+const wildcards = ["Told in reverse", "Only one character is real", "Dream vs reality blur", "Narrator is lying", "Takes place in one room"];
+
+function spin(id, list) {
+  const choice = list[Math.floor(Math.random() * list.length)];
+  document.getElementById(id).textContent = choice;
+}
+</script>
+
+</body>
+</html>
